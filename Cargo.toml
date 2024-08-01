@@ -1,0 +1,79 @@
+[package]
+name = "etutils-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4.6", features = ["derive"] }
+libc = "0.2.149"
+lazy_static = "1.4.0"
+rand = "0.8.5"
+memmap2 = "0.8.0"
+nix = { version = "0.27.1", features = ["signal"] }
+ctrlc = "3.4.1"
+pagemap = { git = "https://github.com/cslab-ntua/et-pagemap-rs.git", branch = "et-micro-artifact" }
+vsock = "0.3.0"
+strum = { version = "0.25.0", features = ["derive"] }
+inotify = "0.10.2"
+procfs = "0.16.0"
+itertools = "0.13.0"
+
+[[bin]]
+name="prctl"
+path = "src/prctl.rs"
+
+[[bin]]
+name="gaps"
+path = "src/gaps.rs"
+
+[[bin]]
+name="idle"
+path = "src/idle.rs"
+
+[[bin]]
+name="memfrag"
+path = "src/memfrag.rs"
+
+[[bin]]
+name="pflat"
+path = "src/pflat.rs"
+
+[[bin]]
+name="pflat-mthp"
+path = "src/pflat-mthp.rs"
+
+[[bin]]
+name="pagecollect"
+path = "src/pagecollect.rs"
+
+[[bin]]
+name="sptecollect"
+path = "src/sptecollect.rs"
+
+[[bin]]
+name="gpasend"
+path = "src/gpasend.rs"
+
+[[bin]]
+name="gparecv"
+path = "src/gparecv.rs"
+
+[[bin]]
+name="overlap"
+path = "src/overlap.rs"
+
+[[bin]]
+name="leshy"
+path = "src/leshy.rs"
+
+[[bin]]
+name="online_leshy"
+path = "src/online_leshy.rs"
+
+[[bin]]
+name="leshy_greedy"
+path = "src/leshy_greedy.rs"
+
+[[bin]]
+name="leshy_alt"
+path = "src/leshy_alt.rs"
